@@ -14,12 +14,12 @@
                 <button id="お知らせ" class="active">お知らせ</button>
                 <button id="コラム">コラム</button>
 
-                <div class="news">
+                <div class="notice">
                     <?php 
                     $homepageEvents = new WP_Query(array(
                         // 'posts_per_page' => 2,
-                        'post_type' => 'news',
-                        // 'order'     => "ASC"
+                        'post_type' => 'notice',
+                        'order'     => "ASC"
                     ));
 
                     while($homepageEvents->have_posts()){
@@ -40,10 +40,11 @@
                     ?>
                 </div>
 
-                <div class="tip d-none">
+                <div class="column d-none">
                     <?php 
                     $homepageEvents = new WP_Query(array(
-                        'post_type' => "tip",
+                        'post_type' => "column",
+                        'order' => "ASC",
                     ));
 
                     while($homepageEvents->have_posts()){
@@ -67,8 +68,8 @@
                 <br>
 
                 <div class="text-end">
-                    <a href="<?php echo get_post_type_archive_link('news'); ?>" class="rounded-pill news-list">おしらせ一覧</a>
-                    <a href="<?php echo get_post_type_archive_link('tip'); ?>" class="rounded-pill d-none tips-list">コラム一覧</a>
+                    <a href="<?php echo get_post_type_archive_link('notice'); ?>" class="rounded-pill notices-list">おしらせ一覧</a>
+                    <a href="<?php echo get_post_type_archive_link('column'); ?>" class="rounded-pill d-none columns-list">コラム一覧</a>
                 </div>
             </div>
         </div>
