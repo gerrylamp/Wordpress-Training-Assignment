@@ -1,32 +1,35 @@
 <?php
 
 function post_types(){
-    register_post_type('news', array(
+    register_post_type('notice', array(
+        'rewrite'     => array(
+            'slug'    => 'news'
+        ),
         'has_archive' => true,
         'public'      => true,
         'labels'      => array(
-            'name'    => 'News',
-            'add_new_item' => 'Add New News',
-            'edit_item' => 'Edit News',
-            'all_item'  => "All News",
-            'singular_name' => 'News'
+            'name'    => 'Notices',
+            'add_new_item' => 'Add New Notice',
+            'edit_item' => 'Edit Notice',
+            'all_item'  => "All Notices",
+            'singular_name' => 'Notice'
         ),
         'menu_icon' => 'dashicons-megaphone'
     ));
 
 
-    register_post_type('tip', array(
+    register_post_type('column', array(
         'rewrite'     => array(
             'slug'    => 'tips'
         ),
         'has_archive' => true,
         'public'      => true,
         'labels'      => array(
-            'name'    => 'Tips',
-            'add_new_item' => 'Add New Tip',
-            'edit_item' => 'Edit Tip',
-            'all_item'  => "All Tips",
-            'singular_name' => 'Tip'
+            'name'    => 'Columns',
+            'add_new_item' => 'Add New Column',
+            'edit_item' => 'Edit Column',
+            'all_item'  => "All Columns",
+            'singular_name' => 'Column'
         ),
         'menu_icon' => 'dashicons-lightbulb'
     ));
