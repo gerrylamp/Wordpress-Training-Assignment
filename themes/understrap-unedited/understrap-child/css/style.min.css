@@ -1,0 +1,151 @@
+.bg-primary {
+  background-color: #eb4d55 !important;
+}
+.color-black,
+footer a,
+header .show a,
+header .showing a,
+.content a {
+  color: black !important;
+}
+.color-white,
+header a:hover,
+.section-1 .rounded-pill {
+  color: #fff !important;
+}
+footer,
+.section-1 {
+  background-color: #eff5f5;
+  padding: 40px 50px;
+}
+footer a,
+footer a:hover,
+.content a {
+  text-decoration: none;
+}
+footer ul {
+  padding: 0;
+}
+footer p {
+  color: #4a7275;
+  font-size: 16px;
+}
+.font-bolder,
+footer p {
+  font-weight: bolder;
+}
+header li a {
+  position: relative;
+  margin: 0 15px;
+  padding: 20px 0 !important;
+}
+header .active a::before,
+header a::before {
+  background-color: #fff;
+}
+header .active a::before,
+header a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  left: 0;
+  bottom: 0;
+  transform: scale(0);
+  transition: 0.3s transform ease;
+}
+header .active a::before,
+header a:hover:before {
+  transform: scale(1);
+}
+header .showing,
+header .show {
+  padding: 50px;
+}
+header .show .active a,
+header .showing .active a {
+  color: #eb4d55 !important;
+}
+header img {
+  width: 200px;
+  height: 100px;
+}
+footer li {
+  list-style: none;
+  padding-bottom: 20px;
+}
+/* Start Header */
+header .btn {
+  background: none !important;
+  border: none;
+}
+/* End Header */
+/* Start Section-1 */
+.section-1 .text-center p {
+  color: #eb6541;
+  font-weight: bolder;
+}
+.section-1 .text-center img {
+  padding-bottom: 15px;
+}
+.dash-bottom {
+  border-bottom: 2px dashed #4a7275;
+}
+.section-1 button {
+  margin-right: 10px;
+  padding: 5px 20px;
+  background: #ffffff;
+  font-size: 20px;
+  color: #4a7275;
+  border: 1px solid #4a7275;
+}
+.section-1 button.active {
+  background: #4a7275;
+  color: #ffffff;
+  border: 1px solid #4a7275;
+}
+.section-1 .rounded-pill {
+  background: #eb6541;
+  float: right;
+  padding: 15px 50px;
+  width: 248px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.section-1 .rounded-pill::after {
+  content: "";
+  border-bottom: 2px solid white;
+  border-right: 2px solid white;
+  position: absolute;
+  transform: rotate(-45deg);
+  width: 8px;
+  height: 8px;
+  right: 20%;
+}
+.section-1 {
+  overflow: hidden;
+  padding: 50px;
+}
+.section-1 .row {
+  padding-left: 20px;
+  padding-top: 30px;
+}
+.section-1 .row .col-2,
+.section-1 .row .col-10 {
+  padding-bottom: 20px;
+}
+/* End Section-1 */
+/* Start Media Query */
+@media (max-width: 768px) {
+  footer .row,
+  .section-1 .row {
+    flex-direction: column;
+  }
+}
+@media (max-width: 480px) {
+  .section-1 {
+    padding: 50px 10px;
+  }
+}
+/* End Media Query */
